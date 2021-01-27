@@ -14,10 +14,9 @@ bag_of_words = Counter(lower_cased)
 print(tokens)
 
 tokenized_docs = [word_tokenize(doc.lower()) for doc in tokens]
-# Create a Dictionary from the articles: dictionary
+
 dictionary = Dictionary(tokenized_docs)
 
-# Select the id for "computer": computer_id
 turk_id = dictionary.token2id.get("türk")
 
 print(dictionary.get(turk_id))
